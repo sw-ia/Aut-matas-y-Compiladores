@@ -1,0 +1,17 @@
+%option noyywrap
+
+%{
+    #include <stdio.h>
+%}
+
+%%
+
+[a-zA-Z]+    { printf("Token: %s\n", yytext); }
+
+%%
+
+int main() {
+    printf("hello world\n");
+    yylex(); 
+    return 0;
+}
